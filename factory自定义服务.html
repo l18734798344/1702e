@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>factory自定义服务</title>
+		<script src="angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-app="app1" ng-controller="ct1"></div>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module("app1",[])
+		// app.factory("服务名"，function(){ 直接返回一上函数，如果是一个对象，需要创建这个对象 })
+		app.factory("hexafy",function(){
+			var f = {}
+			f.myFunc = function(x){
+				return x.toString(16)
+			}
+			return f
+		})
+		
+		app.factory("$ran",function(){
+			return function(n1, n2){
+				return parseInt((n2-n1+1)*Math.random()+n1)
+			}
+		})
+		
+		
+		app.controller("ct1",function($scope, hexafy, $ran){
+			console.log(hexafy.myFunc(255))
+			console.log($ran(5,10))
+		})
+		
+	</script>
+</html>
