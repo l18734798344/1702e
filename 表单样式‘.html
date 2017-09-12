@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单样式</title>
+		<script src="../js/angular.min.js"></script>
+		<style type="text/css">
+			/*根据表单验证状态应用样式*/
+			.ng-dirty{
+				background-color: blue;
+			}
+			.ng-pristine{
+				background-color: green;
+			}
+			.ng-valid{
+				border: 3px solid red;
+			}
+			.ng-invalid{
+				border: 3px solid yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-app="app1" ng-controller="ct1">
+			<form name="myform">
+				<input type="text" required ng-model="user" name="user" />
+				<input type="submit" value="提交"/>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module("app1",[])
+		app.controller("ct1",function($scope){
+			
+		})
+	</script>
+</html>
+	<script type="text/javascript">
+		var app = angular.module("app1" [])
+		app.controller("ctl",function($scope){
+			
+		})
+	</script>
+</html>
