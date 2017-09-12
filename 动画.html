@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="../js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="../02E0821/angular-animate.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100%;
+			height: 200px;
+			position: relative;
+			left: 0;
+			top: 0;
+			transition: all linear 1s;
+			background-color:red;
+		}
+		div.ng-hide{
+			height: 0;
+		}
+	</style>
+	<body ng-app="app1" ng-coneroller="ctl">
+		隐藏：<input type="checkbox" ng-model="mycheck" />
+	  <div ng-hide="mycheck">动画效果</div>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module("app1",["ngAnimate"])
+		app.controller("ctl",function($scope){
+			
+		})
+	</script>
+	
+</html>
